@@ -36,6 +36,8 @@ const onButtonCreateBoxesHandler = function () {
     let value = 30;
     const allBoxes = [];
 
+    parentContainerBoxesRefs.innerHTML = '';
+
     for (let i = 0; i < inputValue; i += 1) {
         const getRandomNumber = function () {
             const MIN = 0;
