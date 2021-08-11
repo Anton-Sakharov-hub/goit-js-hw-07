@@ -1,9 +1,10 @@
 const inputRefs = document.querySelector('#validation-input');
 
 const onInputLengthCheck = function (event) {
-console.log(event.currentTarget.value.length);
+    const targetValueLength = event.target.value.length
+    const inputDataLength = inputRefs.dataset.length
 
-    if (event.currentTarget.value.length <= inputRefs.dataset.length) {
+    if (targetValueLength == inputDataLength) {
         inputRefs.classList = 'valid';
     } else {
         inputRefs.classList = 'invalid';
