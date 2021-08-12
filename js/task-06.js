@@ -4,6 +4,8 @@ const onInputLengthCheck = function (event) {
     const targetValueLength = event.target.value.length
     const inputDataLength = inputRefs.dataset.length
 
+    inputRefs.classList.remove('valid', 'invlid')
+
     if (targetValueLength == inputDataLength) {
         inputRefs.classList = 'valid';
     } else {
@@ -12,3 +14,4 @@ const onInputLengthCheck = function (event) {
 }
 
 inputRefs.addEventListener('blur', onInputLengthCheck)
+
