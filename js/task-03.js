@@ -27,14 +27,13 @@ const images = [
 ];
 
 const createGalleryMarkup = function (images) {
-  const markup = images.reduce((string, item) => {
+  return images.reduce((string, item) => {
     return string + `<li><img src='${item.url}' alt='${item.alt}'></li>`
   }, '');
-
-  const ulRefs = document.querySelector('#gallery');
-  ulRefs.insertAdjacentHTML("afterbegin", markup);
 };
 
-createGalleryMarkup(images);
+const markup = createGalleryMarkup(images);
 
+const ulRefs = document.querySelector('#gallery');
+ulRefs.insertAdjacentHTML("afterbegin", markup);
 
